@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Study Video Blocker",
+    "version": "1.0",
+    "description": "Blocks unrelated videos on YouTube based on your study topic using Groq LLM.",
+    "permissions": ["storage", "tabs", "scripting"],
+    "action": {
+      "default_popup": "index.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/watch*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ]
+  }
+  
